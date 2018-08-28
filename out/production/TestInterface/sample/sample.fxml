@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="539.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="441.0" prefWidth="640.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="241.0" prefWidth="318.0" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="19.0" layoutY="79.0" prefHeight="38.0" prefWidth="287.0" style="-fx-background-color: transparent; -fx-border-color: #0078D7; -fx-border-width: 1.4px;">
+                     <children>
+                        <ImageView fx:id="searchButton" fitHeight="35.0" fitWidth="21.0" layoutX="200.6" layoutY="6.4" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: pointer;" AnchorPane.bottomAnchor="7.999999999999993" AnchorPane.rightAnchor="9.400000000000006" AnchorPane.topAnchor="6.4">
+                           <image>
+                              <Image url="@icons/icons8_Search_50px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="searchField" layoutX="2.0" layoutY="6.4" prefHeight="29.0" prefWidth="250.0" promptText="Keyword" style="-fx-background-color: transparent; -fx-border-color: white;" AnchorPane.bottomAnchor="4.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Eras Demi ITC" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="54.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Query" wrappingWidth="249.99999260902405">
+                     <font>
+                        <Font name="Eras Demi ITC" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="22.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_Search_40px.png" />
+                     </image>
+                  </ImageView>
+                  <ProgressIndicator fx:id="loader" layoutX="266.0" layoutY="29.0" prefHeight="38.0" prefWidth="30.0" />
+                  <Label fx:id="log" layoutX="22.0" layoutY="130.0" prefHeight="29.0" prefWidth="233.0" text="Total results: " textFill="#b2aaaa" />
+                  <ImageView fx:id="stopButton" fitHeight="38.0" fitWidth="47.0" layoutX="214.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_Stop_99px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="22.0" layoutY="165.0" prefHeight="29.0" prefWidth="287.0" text="Tweet details: " textAlignment="RIGHT" textFill="#b2aaaa" />
+               </children>
+            </Pane>
+            <ScrollPane fx:id="scroller" fitToHeight="true" fitToWidth="true" layoutX="311.0" prefHeight="400.0" prefWidth="340.0" style="-fx-focus-color: white; -fx-border-color: white; -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="318.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane fx:id="scrollerElt" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="205.0" prefHeight="335.0" prefWidth="318.0" style="-fx-focus-color: white; -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="204.0">
+               <content>
+                  <AnchorPane fx:id="tweetInfo" prefHeight="334.0" prefWidth="318.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
